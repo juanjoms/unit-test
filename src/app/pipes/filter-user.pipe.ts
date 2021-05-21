@@ -6,7 +6,7 @@ import { User } from '../services/user.service';
 })
 export class FilterUserPipe implements PipeTransform {
 
-  transform(users: User[], term: string): User[] {
+  transform(users: User[] | undefined, term: string): User[] {
     if (!users) {
       return []
     };
